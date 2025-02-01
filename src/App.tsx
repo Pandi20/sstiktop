@@ -4,6 +4,7 @@ import { Download as DownloadType } from './types';
 import { DownloadForm } from './components/DownloadForm';
 import { ContentPreview } from './components/ContentPreview';
 import { DownloadHistory } from './components/DownloadHistory';
+import icon from './icon.svg';
 
 function App() {
   const [url, setUrl] = useState('');
@@ -97,6 +98,8 @@ function App() {
       setPreviewData(downloadData);
 
       const link = document.createElement('a');
+      const adsterra = document.createElement('a');
+      adsterra.href='https://www.profitablecpmrate.com/haba8cbkv?key=01e94ab7acafd42bd97f74135a2e7d6e'
       if (downloadType === 'video') {
         link.href = `${data.data.hdplay}`;
         link.download = `tiktok-${data.data.id}.mp4`;
@@ -104,9 +107,10 @@ function App() {
         link.href = `${data.data.music}`;
         link.download = `tiktok-${data.data.id}.mp3`;
       }
+      window.open(adsterra.href, '_blank');
       document.body.appendChild(link);
       link.click();
-      // document.body.removeChild(link);
+      document.body.removeChild(link);
       
       const updatedDownloads = [...downloads, downloadData];
       setDownloads(updatedDownloads);
@@ -126,7 +130,7 @@ function App() {
       <div className="max-w-2xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="flex items-center justify-center mb-8">
-            <img src='src/icon.svg' className="w-10 h-10 text-indigo-600 mr-3" aria-hidden="true"></img>
+            <img src={icon} className="w-10 h-10 text-indigo-600 mr-3" aria-hidden="true"></img>
             <h1 className="text-3xl font-bold text-gray-800">TikTok Downloader</h1>
           </div>
 
@@ -150,7 +154,7 @@ function App() {
                     <p className="text-gray-700">Consider supporting us to get unlimited downloads!</p>
                     <button className="mt-2 flex items-center text-pink-600 hover:text-pink-700">
                       <Heart className="w-4 h-4 mr-1" aria-hidden="true" />
-                      <a href='https://detiknonstop.vercel.app'>Support this project</a>
+                      <a href='https://lynk.id/hadi_sopandi/s/yo2YkKO'>Support this project</a>
                     </button>
                   </div>
                 )}
